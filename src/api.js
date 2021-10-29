@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   res.json({
-    hello: "hi Ilham!!!",
+    hello: "hi bro!!!",
   });
 });
 
@@ -16,7 +16,6 @@ router.get("/test", (req, res) => {
   });
 });
 
-// app.use("/.netlify/functions/api", router);
-app.use("/", router);
+app.use("/.netlify/functions/api", router);
 
 module.exports.handler = serverless(app);
